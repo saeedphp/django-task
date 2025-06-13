@@ -32,6 +32,10 @@ class UserRegisterView(APIView):
 
 
 class UserLoginView(APIView):
+    """
+    This api view is used to login a user,
+    send otp code
+    """
     serializer_class = UserLoginSerializer
 
     def post(self, request):
@@ -49,6 +53,10 @@ class UserLoginView(APIView):
 
 
 class UserVerifyView(APIView):
+    """
+    This api view is used to verify a user
+    get otp code and get user token
+    """
     serializer_class = UserVerifySerializer
 
     def get(self, request):
